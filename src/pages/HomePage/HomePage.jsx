@@ -7,7 +7,7 @@ import './HomePage.css';
 
 const HomePage = () => {
   return (
-    <main className='text-light home-page'>
+    <main className='text-light home-page' data-test='homePageContainer'>
       <section className='d-flex flex-column big-banner align-items-center justify-content-center'>
         <h1 className='display-3 font-weight-normal'>Resort Hotel</h1>
         <h2>Live the experience!</h2>

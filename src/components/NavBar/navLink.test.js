@@ -16,7 +16,6 @@ describe('Component renders', () => {
       page: 'home'
     };
     wrapper = shallow(<NavLink {...props} />);
-    wrapper.debug();
   });
 
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());
