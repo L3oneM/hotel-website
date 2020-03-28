@@ -1,16 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import NavLink from './NavLink';
 import { navLinks } from './navLinksData';
 
+import './Navbar.css';
+
 const Navbar = ({ currentPage, setCurrentPage }) => {
   return (
     <nav
-      className='navbar navbar-expand-sm navbar-dark bg-dark text-uppercase '
+      className='navbar navbar-expand-sm navbar-dark bg-dark text-uppercase fixed-top'
       data-test='navbarComponent'
     >
-      <Link to='/' className='navbar-brand ml-1' data-test='navbarLink'>
+      <Link
+        to='/'
+        className='navbar-brand ml-1'
+        data-test='navbarLink'
+        onClick={() => setCurrentPage('home')}
+      >
         <img
           src='/images/logo_transparent.png'
           style={{
@@ -47,6 +55,11 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  currentPage: PropTypes.oneOf(['home', 'rooms', 'contact', 'login']),
+  setCurrentPage: PropTypes.func.isRequired
 };
 
 export default Navbar;

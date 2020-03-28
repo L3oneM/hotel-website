@@ -6,3 +6,11 @@
 .service-img {
   height: 300px;
 }
+
+@media only screen and (max-width: 768px) {
+  .service-card {
+    width: 300px;
+    max-width: 300px;
+    max-height: 740px;
+  }
+}

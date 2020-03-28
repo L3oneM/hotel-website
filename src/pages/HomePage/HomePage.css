@@ -5,3 +5,14 @@
   background-size: cover;
   height: calc(100vh - 56px);
 }
+
+.home-page {
+  width: 100vw;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 .homeHead {
+    font-size: 5rem;
+    color: red;
+  }
+}

@@ -4,6 +4,9 @@ import { Switch, Route } from 'react-router-dom';
 import Navbar from './components/NavBar/Navbar';
 import HomePage from './pages/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
+import RoomsPage from './pages/RoomsPage/RoomsPage';
+import RoomPage from './pages/RoomPage/RoomPage';
+import ContactPage from './pages/ContanctPage/ContanctPage';
 
 import './App.css';
 
@@ -14,7 +17,14 @@ function App() {
     <>
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <Switch>
-        <Route exact path='/' component={HomePage} />
+        <Route
+          exact
+          path='/'
+          render={() => <HomePage setCurrentPage={setCurrentPage} />}
+        />
+        <Route exact path='/rooms' component={RoomsPage} />
+        <Route exact path='/rooms/:id' component={RoomPage} />
+        <Route exact path='/contact' component={ContactPage} />
       </Switch>
       <Footer />
     </>
