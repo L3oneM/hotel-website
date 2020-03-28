@@ -73,7 +73,7 @@ const SearchForm = ({ filters, setFilters, rooms }) => {
             type='range'
             min='0'
             max={maxPrice}
-            className='form-control-range'
+            className='custom-range'
             aria-label='Range filter for room price'
             id='formControlRange'
             value={roomPrice}

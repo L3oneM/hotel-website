@@ -1,0 +1,10 @@
+.logandSignupContainer {
+  min-height: calc(100vh - 306px);
+  max-width: 860px;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-container .signUp-container {
+    width: 50%;
+  }
+}

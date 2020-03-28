@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import RoomsPage from './pages/RoomsPage/RoomsPage';
 import RoomPage from './pages/RoomPage/RoomPage';
 import ContactPage from './pages/ContanctPage/ContanctPage';
+import LoginAndSignUpPage from './pages/LoginAndSignUpPage/LoginAndSignUpPage';
 
 import './App.css';
 
@@ -25,6 +26,7 @@ function App() {
         <Route exact path='/rooms' component={RoomsPage} />
         <Route exact path='/rooms/:id' component={RoomPage} />
         <Route exact path='/contact' component={ContactPage} />
+        <Route path='/login' component={LoginAndSignUpPage} />
       </Switch>
       <Footer />
     </>

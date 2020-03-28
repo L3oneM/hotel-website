@@ -37,7 +37,7 @@ const RoomsPage = () => {
       {!roomsToShow ? (
         <h1> Loading...... </h1>
       ) : (
-        <section className='rooms-showcase row row-cols-1 row-cols-sm-2 row-cols-md-3 m-auto'>
+        <section className='rooms-showcase row row-cols-1 row-cols-sm-2 row-cols-md-3 m-auto card-deck'>
           {roomsToShow.map(room => (
             <RoomCard key={room.id} room={room} />
           ))}

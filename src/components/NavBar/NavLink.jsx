@@ -16,7 +16,7 @@ const NavLink = ({ currentPage, setCurrentPage, page }) => {
         onClick={() => setCurrentPage(page)}
         data-test='clickedlinkComponent'
       >
-        {page}
+        {page === 'login' ? 'LOGIN/SIGNUP' : page}
         {currentPage === page ? (
           <span className='sr-only'>(current)</span>
         ) : null}
